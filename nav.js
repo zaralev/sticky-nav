@@ -7,4 +7,24 @@ $(document).ready(function() {
         $(".mobile-dropdown").toggle();
     });
 
+    var stickydesktop = $('.desktop').offset().top;
+
+    var stickyNav = function() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickydesktop) {
+            $('.desktop').addClass('sticky');
+        } else {
+            $('.desktop').removeClass('sticky');
+        }
+
+    };
+
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
+
+    });
+
 });

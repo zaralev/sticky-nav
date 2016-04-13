@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  margin:auto;
+}
+
+
+.main {
+	background-color:#ccc;
+	padding: 2em;
+	position:relative;
+	top: 4em;
+  transition: all 0.5s ease;
+}
+
+.header {
+	background-color:#ddd;
+  width: 100%;
+	padding: 2em;
+  position:relative;
+  top: 4em;
+  transition: all 0.5s ease;
+  height: 30em;
+}
+
+
+@media screen and (min-width:768px) {
+    .header {
+      top: 0em;
+    }
+
+    .main {
+      top:0em;
+    }
+
+    .container {
+        width: 80%;
+    }
+  }
