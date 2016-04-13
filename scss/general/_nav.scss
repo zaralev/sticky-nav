@@ -15,7 +15,7 @@ $hamhover: #555; // hamburger hover
     box-sizing: border-box;
 }
 .nav {
-  background-color: white;
+  background-color: $mobilebar;
   position: fixed;
   width: 100%;
   left: 0;
