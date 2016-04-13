@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+// hamburger
     $(".mobile-dropdown").hide();
 
     $("#hamburger").click(function() {
@@ -7,6 +7,7 @@ $(document).ready(function() {
         $(".mobile-dropdown").toggle();
     });
 
+// sticky nav
     var stickydesktop = $('.desktop').offset().top;
 
     var stickyNav = function() {
