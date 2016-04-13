@@ -14,12 +14,11 @@
   margin: 0;
   padding: 0.5em;
   list-style-type: none;
-  background-color: #f00;
-  float: right;
   cursor: pointer; }
 
 .nav li.mobile {
-  margin-top: 0.4em; }
+  margin-top: 0.4em;
+  float: right; }
 
 li.mobile span {
   height: 0.6em;
@@ -33,19 +32,52 @@ li.mobile span {
 .mobile-dropdown {
   background-color: #0f0;
   position: relative;
-  top: 4.4em;
+  top: 3.4em;
   width: 100%; }
 
 ul.mobile-nav {
-  padding: 0em;
+  padding: 0;
   list-style-type: none; }
   ul.mobile-nav li {
     padding: 1em; }
-  ul.mobile-nav li:hover, ul.mobile-nav li:active {
+  ul.mobile-nav li:active,
+  ul.mobile-nav li:hover {
     background-color: #f00; }
   ul.mobile-nav a {
     text-decoration: none;
     color: #000;
     text-transform: uppercase; }
+
+.desktop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: #d00; }
+
+.desktop ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #f00; }
+
+.desktop ul li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  padding: 1.6em;
+  background-color: #f00;
+  float: right; }
+  .desktop ul li:hover {
+    background-color: #000; }
+
+@media screen and (min-width: 768px) {
+  .desktop {
+    display: block; }
+
+  .nav {
+    visibility: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,10 @@
-$(document).ready(function(){
-  $(".mobile-dropdown").hide();
-  // $("#hamburger").click(function(){
-  //     $(".mobile-dropdown").show();
-  // });
-  $("#hamburger").click(function(){
-      $(".mobile-dropdown").toggle();
-  });
+$(document).ready(function() {
+
+    $(".mobile-dropdown").hide();
+
+    $("#hamburger").click(function() {
+        // $(".mobile-dropdown").fadeToggle("fast");
+        $(".mobile-dropdown").toggle();
+    });
+
 });
