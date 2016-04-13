@@ -1,3 +1,20 @@
+
+/*  DESKTOP  */
+$navbar: #fff; // desktop navigation background color
+$navhover: #CCC; // desktop navigation hover
+
+/*  MOBILE  */
+$navLink: #000; // mobile link color
+$navLinkHover: #CC44DD; // mobile link hover
+$mobilebar: #ff0073; // mobile navigation background color
+$mobilehover: #ff6598; // mobile navigation hover
+$mobLink: #fff; // mobile link color
+$mobLinkHover: #000; // mobile link hover
+
+/*  HAMBURGER */
+$ham: #000; // hamburger color
+$hamhover: #555; // hamburger hover
+
 * {
     box-sizing: border-box;
 }
@@ -17,13 +34,15 @@
     cursor: pointer;
 }
 .nav li.mobile {
-    // background-color: #333;
     margin-top: 0.4em;
     float: right;
+    &:hover span {
+        background-color: $hamhover; // hamburger hover
+    }
 }
 li.mobile span {
     height: 0.6em;
-    background-color: #000;
+    background-color: $ham; // hamburger color
     display: block;
     border-radius: 4em;
     margin-bottom: 0.4em;
@@ -31,7 +50,7 @@ li.mobile span {
     vertical-align: middle;
 }
 .mobile-dropdown {
-    background-color: #0f0;
+    background-color: $mobilebar; // mobile navigation background color
     position: relative;
     top: 3.4em;
     width: 100%;
@@ -44,12 +63,16 @@ ul.mobile-nav {
     }
     li:active,
     li:hover {
-        background-color: #f00;
+        background-color: $mobilehover; // mobile navigation hover
     }
     a {
         text-decoration: none;
-        color: #000;
+        color: $mobLink; // mobile link color
         text-transform: uppercase;
+    }
+    a:hover {
+        color: $mobLinkHover;
+        // mobile link hover
     }
 }
 .desktop {
@@ -59,23 +82,31 @@ ul.mobile-nav {
     left: 0;
     width: 100%;
     z-index: 4;
-    background-color: #d00;
+    background-color: $navbar; // desktop navigation background color
 }
 .desktop ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    background-color: #f00;
 }
 .desktop ul li {
     cursor: pointer;
     display: inline-block;
     margin: 0;
     padding: 1.6em;
-    background-color: #f00;
+    background-color: $navbar; // desktop navigation background color
     float: right;
     &:hover {
-        background-color: #000;
+        background-color: $navhover; // desktop navigation background hover
+        a {
+            color: $navLinkHover;
+            text-decoration: underline;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $navLink;
+        text-transform: uppercase;
     }
 }
 @media screen and (min-width:768px) {

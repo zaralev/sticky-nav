@@ -1,3 +1,6 @@
+/*  DESKTOP  */
+/*  MOBILE  */
+/*  HAMBURGER */
 * {
   box-sizing: border-box; }
 
@@ -19,6 +22,8 @@
 .nav li.mobile {
   margin-top: 0.4em;
   float: right; }
+  .nav li.mobile:hover span {
+    background-color: #555; }
 
 li.mobile span {
   height: 0.6em;
@@ -30,7 +35,7 @@ li.mobile span {
   vertical-align: middle; }
 
 .mobile-dropdown {
-  background-color: #0f0;
+  background-color: #ff0073;
   position: relative;
   top: 3.4em;
   width: 100%; }
@@ -42,11 +47,13 @@ ul.mobile-nav {
     padding: 1em; }
   ul.mobile-nav li:active,
   ul.mobile-nav li:hover {
-    background-color: #f00; }
+    background-color: #ff6598; }
   ul.mobile-nav a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     text-transform: uppercase; }
+  ul.mobile-nav a:hover {
+    color: #000; }
 
 .desktop {
   display: none;
@@ -55,23 +62,29 @@ ul.mobile-nav {
   left: 0;
   width: 100%;
   z-index: 4;
-  background-color: #d00; }
+  background-color: #fff; }
 
 .desktop ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  background-color: #f00; }
+  list-style-type: none; }
 
 .desktop ul li {
   cursor: pointer;
   display: inline-block;
   margin: 0;
   padding: 1.6em;
-  background-color: #f00;
+  background-color: #fff;
   float: right; }
   .desktop ul li:hover {
-    background-color: #000; }
+    background-color: #CCC; }
+    .desktop ul li:hover a {
+      color: #CC44DD;
+      text-decoration: underline; }
+  .desktop ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase; }
 
 @media screen and (min-width: 768px) {
   .desktop {
