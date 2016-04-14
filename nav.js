@@ -1,5 +1,5 @@
 $(document).ready(function() {
-// hamburger
+    // hamburger
     $(".mobile-dropdown").hide();
 
     $("#hamburger").click(function() {
@@ -7,25 +7,23 @@ $(document).ready(function() {
         $(".mobile-dropdown").toggle();
     });
 
-// sticky nav
-    var stickydesktop = $('.desktop').offset().top;
+
+    var stickyNavTop = $('.desktop').offset().top;
 
     var stickyNav = function() {
         var scrollTop = $(window).scrollTop();
 
-        if (scrollTop > stickydesktop) {
+        if (scrollTop > stickyNavTop) {
             $('.desktop').addClass('sticky');
         } else {
             $('.desktop').removeClass('sticky');
         }
-
     };
 
     stickyNav();
 
     $(window).scroll(function() {
         stickyNav();
-
     });
 
 });
